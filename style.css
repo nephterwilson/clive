@@ -1,0 +1,493 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify; /* Justify text for the entire body */
+}
+
+header {
+    background-color: teal;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.toggle-button {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+        background: #004d40; /* Darker teal for the toggle button */
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    .toggle-button .bar {
+        display: block;
+        background: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .toggle-button.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle-button.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-button.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #004d40; /* Darker teal for the menu */
+        position: absolute;
+        top: 60px; /* Adjusted to ensure the menu does not overlap the header */
+        right: 0;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 1rem;
+        color: #fff;
+        display: block; /* Ensure links are clickable */
+    }
+
+    nav a:hover {
+        background-color: #007bff;
+    }
+
+    /* Ensure one image and one container for content on small screens */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery .image-container {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .gallery .content-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+}
+
+/* Page Specific Styles */
+main {
+    max-width: 1200px;
+    margin: 100px auto 20px; /* Adjust margin-top to avoid content hiding behind the fixed header */
+    padding: 0 20px;
+    text-align: justify; /* Justify text content */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center; /* Center align h1 text */
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #132d5d;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center; /* Center align text for footer */
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for better text input */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Increased border-radius for a softer look */
+}
+
+.contact-form textarea {
+    height: 150px; /* Increased height for better text area */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    padding: 15px 25px; /* Increased padding for better button size */
+    background-color: #28a745; /* Updated CTA Button Background Color */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Increased border-radius for consistency */
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+}
+
+/* Grid and Flex Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center align flex items */
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Text left align in cards */
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* Call-to-Action */
+.cta {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta .button {
+    background-color: #007bff; /* Updated CTA Button Background Color */
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.cta .button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.about h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.services h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service {
+    margin-bottom: 2rem;
+}
+
+.service h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.contact button {
+    background-color: #28a745; /* Updated CTA Button Background Color */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+}
+
+/* Portfolio Section */
+.portfolio {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.portfolio .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+.project-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Text left align in cards */
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio .grid-container {
+        grid-template-columns: 1fr; /* 1 column per row on small screens */
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .gallery .image-container {
+        flex-direction: column;
+    }
+
+    .toggle-button {
+        display: block;
+        background: #004d40; /* Darker teal for the toggle button */
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #004d40; /* Darker teal for the menu */
+        position: absolute;
+        top: 60px; /* Adjusted position */
+        right: 0;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 1rem;
+        color: #fff;
+        display: block;
+    }
+
+    nav a:hover {
+        background-color: #007bff;
+    }
+
+    /* Ensure one image and one container for content on small screens */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery .image-container {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .gallery .content-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+}
+
+/* Contact Page Specific Styles */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the page takes at least the full viewport height */
+}
+
+.contact-page main {
+    flex: 1; /* Allow main content to grow and push the footer down */
+}
+
+.contact-page footer {
+    margin-top: auto; /* Push footer to the bottom of the page */
+}

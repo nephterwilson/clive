@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Millennium PVT School</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="banner-content">
+                <h1>Welcome to Our Portfolio</h1>
+                <p>Check out my latest projects and works</p>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <h2>My Projects</h2>
+            <div class="grid-container">
+                <div class="project-card">
+                    <img src="formi.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>At Millennium Private School, we are dedicated to providing exceptional 
+                        education at an affordable cost. Our fees are designed to ensure that every 
+                        student has the opportunity to receive a high-quality education without financial barriers.</p>
+
+                       <h3>Term Fees: K80,000</h3> 
+                       <p>Our term fees cover all essential educational resources, including textbooks, 
+                        learning materials, and access to our comprehensive curriculum. We believe in 
+                        delivering value for money through a well-rounded and engaging educational experience.
+                        
+                        <h3>Registration Fees: K5,000</h3>
+                        <p>The one-time registration fee is a nominal charge that secures your child’s 
+                        place at our school and covers the administrative costs of enrollment..</p>
+                </div>
+                <div class="project-card">
+                    <img src="promotion.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>Project description goes here. Brief details about the project.</p>
+                </div>
+                <div class="project-card">
+                    <img src="gara2024.jpg" alt="Project 3">
+                    <h3>Part of 2023 graduation at Masonga Resort in Area 25</h3>
+                    <p>The 2023 graduation ceremony at Masonga Resort was a memorable and significant milestone
+                         for the Form 4 students, marking the end of their secondary education 
+                         journey and the beginning of new opportunities.</p>
+                </div>
+                <div class="project-card">
+                    <img src="upile.jpg" alt="Project 4">
+                    <h3>Project Title 4</h3>
+                    <p>Project description goes here. Brief details about the project.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

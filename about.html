@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Millennium PVT School</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-button" id="toggle-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Us</h1>
+            <div class="flex-container">
+                <div class="card">
+                    <h2>Our Mission</h2>
+                    <p>To provide high-quality education that prepares students for
+                        future challenges through academic excellence, holistic development, and a supportive
+                        environment.</p>
+                </div>
+                <div class="card">
+                    <h2>Our Vision</h2>
+                    <p>“To be a leading institution that transforms lives
+                        through innovative education, inspiring students to achieve their
+                        full potential and contribute positively to the world.”</p> <!-- Removed extra period -->
+                </div>
+                <div class="card">
+                    <h2>Our Values</h2>
+                    <p><b>Academic Excellence:</b>
+                        Commitment to high standards of education that fosters intellectual growth and success.</p>
+                    <p><b>Holistic Development:</b>
+                        Encouragement of balanced growth in academic, personal, and social aspects to prepare
+                        well-rounded individuals.</p>
+                    <p><b>Supportive Environment:</b>
+                        Fostering a nurturing and inclusive community that supports each student’s learning journey.</p>
+                    <p><b>Integrity:</b>
+                        Upholding honesty, fairness, and ethical practices in all educational and interpersonal
+                        interactions.</p> <!-- Removed extra period -->
+                </div>
+            </div>
+        </section>
+        <div class="cta">
+            <a href="services.html" class="button">Preview Our Service</a> <!-- Fixed button text -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Millennium Private School. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+    <script src="script.js" defer></script> <!-- Moved script.js to the bottom and added defer -->
+</body>
+
+</html>
